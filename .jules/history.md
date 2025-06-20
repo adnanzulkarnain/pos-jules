@@ -15,3 +15,6 @@
 
 ### Tahap 7 - Transaksi Backend
 ✅ Transaksi bisa dibuat dan stok otomatis dikurangi.
+
+### Tahap 8 - Halaman Kasir
+✅ Halaman kasir dengan fitur keranjang dan transaksi siap digunakan.
