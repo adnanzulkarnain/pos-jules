@@ -9,3 +9,6 @@
 
 ### Tahap 4 - Autentikasi Backend
 ✅ Endpoint register & login siap, JWT digunakan untuk autentikasi.
+
+### Tahap 5 - Produk Backend
+✅ API CRUD produk sudah tersedia.
