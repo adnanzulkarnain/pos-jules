@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    # If you create a .env file in the root, you can uncomment the next line
+    # env_file:
+    #   - .env
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      # For development, mapping to Vite's dev server port (default 5173)
+      # For production build from Dockerfile, it would be the port exposed there (e.g., 3000)
+      - "5173:5173"
+    volumes:
+      # Mount the source code for development
+      - ./frontend:/app
+      # Add node_modules as a separate anonymous volume to prevent local node_modules from overwriting container's node_modules
+      # This is particularly useful if node_modules is in .dockerignore or if OS differences cause issues.
+      - /app/node_modules
+    # Keep the container running for Vite's dev server
+    stdin_open: true
+    tty: true
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
