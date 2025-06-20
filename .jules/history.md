@@ -12,3 +12,6 @@
 
 ### Tahap 5 - Produk Backend
 ✅ API CRUD produk sudah tersedia.
+
+### Tahap 7 - Transaksi Backend
+✅ Transaksi bisa dibuat dan stok otomatis dikurangi.
