@@ -6,3 +6,6 @@
 
 ### Tahap 3 - Docker & Dev Environment
 ✅ Docker backend & frontend siap jalan. .env template tersedia.
+
+### Tahap 4 - Autentikasi Backend
+✅ Endpoint register & login siap, JWT digunakan untuk autentikasi.
